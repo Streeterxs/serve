@@ -1,7 +1,7 @@
-import { argsSanitizer } from "./argSanitizer";
+import { argsSanitizer } from "./argsSanitizer";
 import { pathSanitizer } from "./pathSanitizer";
 
 export const sanitizers = {
-    path: pathSanitizer,
-    args: argsSanitizer,
+    pathSanitizer,
+    argsSanitizer,
 };
