@@ -1,5 +1,5 @@
 {
-  "name": "serve",
+  "name": "simple-serve",
   "version": "1.0.0",
   "description": "",
   "main": "./build/index",
@@ -29,6 +29,6 @@
     "typescript": "^4.0.3"
   },
   "bin": {
-    "serve": "./build/index.js"
+    "simserve": "./build/index.js"
   }
 }
