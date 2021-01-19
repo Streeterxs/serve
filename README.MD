@@ -5,4 +5,4 @@ Is a package that uses koa-static plus koa to serve builded files
 `serve ./build`
 
 ### Instalation
--- In Progress --
+`npm i -g marvelous-serve`
