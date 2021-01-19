@@ -1,6 +1,6 @@
 {
   "name": "marvelous-serve",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "./build/index",
   "scripts": {
@@ -13,7 +13,6 @@
   "author": "Afonso Araújo Neto",
   "license": "ISC",
   "dependencies": {
-    "@babel/plugin-transform-modules-commonjs": "^7.12.1",
     "koa": "^2.13.1",
     "koa-static": "^5.0.0"
   },
@@ -22,6 +21,7 @@
     "@babel/core": "^7.11.6",
     "@babel/node": "^7.10.5",
     "@babel/plugin-transform-runtime": "^7.11.5",
+    "@babel/plugin-transform-modules-commonjs": "^7.12.1",
     "@babel/preset-env": "^7.11.5",
     "@babel/preset-typescript": "^7.10.4",
     "@types/node": "^14.11.1",
