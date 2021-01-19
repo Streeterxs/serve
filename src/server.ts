@@ -13,7 +13,7 @@ export const server = (path, PORT=4449) => {
 
         app.use(serve(path));
         app.listen(PORT);
-        
+
         // eslint-disable-next-line
         console.log(`Listening on ${PORT}`);
         // eslint-disable-next-line

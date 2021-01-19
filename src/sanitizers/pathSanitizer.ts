@@ -11,6 +11,7 @@ export const pathSanitizer = (unsanitizedPath: string) => {
 
         const isFile = fs.statSync(unsanitizedPath).isFile();
         console.log('isFile: ', isFile);
+
         if (!isFile) {
 
             console.log('path: ', inputedPath);
@@ -23,7 +24,7 @@ export const pathSanitizer = (unsanitizedPath: string) => {
                 isFile
             };
         } else {
-            
+
             console.log('path: ', inputedPath);
             const arrayPaths = inputedPath.split('/');
             const fileName = arrayPaths[arrayPaths.length - 1];
