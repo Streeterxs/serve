@@ -1,15 +1,15 @@
 import fs from 'fs';
 import path from 'path';
 
-export const pathSanitizer = (args: string[]) => {
+export const pathSanitizer = (unsanitizedPath: string) => {
 
     try {
-        console.log('args: ', args);
+        console.log('unsanitizedPath: ', unsanitizedPath);
 
         const rootCwdFn = path.join.bind(process.cwd());
-        const inputedPath = rootCwdFn(args[1]);
+        const inputedPath = rootCwdFn(unsanitizedPath);
 
-        const isFile = fs.statSync(args[1]).isFile();
+        const isFile = fs.statSync(unsanitizedPath).isFile();
         console.log('isFile: ', isFile);
         if (!isFile) {
 
