@@ -1,5 +1,6 @@
 export type SanitizedArgs = {
     path: string;
+    port: number;
 };
 export const argsSanitizer = (args: string[]): SanitizedArgs => {
 
@@ -7,10 +8,10 @@ export const argsSanitizer = (args: string[]): SanitizedArgs => {
 
         console.log('args: ', args);
         const path = args[0];
-
-        console.log('path: ', path);
+        const port = args[1] ? +args[1] : null;
         return {
-            path
+            path,
+            port
         };
     } catch (err) {
 

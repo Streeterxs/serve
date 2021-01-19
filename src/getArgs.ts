@@ -6,4 +6,4 @@ export const getArgs = () => {
 
     const { argsSanitizer } = sanitizers;
     return argsSanitizer(unsanitizedArgs);
-}
+};

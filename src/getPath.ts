@@ -1,10 +1,8 @@
-import { getArgs } from "./getArgs";
 import { sanitizers } from "./sanitizers";
 
-export const getPath = () => {
+export const getPath = (unsanitizedPath: string) => {
 
-    const args = getArgs();
     const { pathSanitizer } = sanitizers;
 
-    return pathSanitizer(args.path);
+    return pathSanitizer(unsanitizedPath);
 };
