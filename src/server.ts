@@ -1,15 +1,24 @@
 import Koa from 'koa';
 import serve from 'koa-static'
 
-const app = new Koa();
+export const server = (path, PORT=4449) => {
 
-app.use(serve('./build'));
+    try {
 
-const PORT = 4449;
+        const app = new Koa();
 
-app.listen(PORT);
+        if (!path) {
+            throw new Error('path non existant!');
+        }
 
-// eslint-disable-next-line
-console.log(`Listening on ${PORT}`);
-// eslint-disable-next-line
-console.log(`http://localhost:${PORT}`);
+        app.use(serve(path));
+        app.listen(PORT);
+        
+        // eslint-disable-next-line
+        console.log(`Listening on ${PORT}`);
+        // eslint-disable-next-line
+        console.log(`http://localhost:${PORT}`);
+    } catch (err) {
+        console.log('err: ', err);
+    }
+};
